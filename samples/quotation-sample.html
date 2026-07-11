@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>御見積書 サンプル（方針B）</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 16mm 14mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: #111;
+      font-family: "Yu Gothic", "Hiragino Sans", "Noto Sans JP", Meiryo, sans-serif;
+      font-size: 11px;
+      line-height: 1.55;
+    }
+
+    .sheet {
+      width: 100%;
+      max-width: 180mm;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: flex-end;
+      gap: 24px;
+      margin-bottom: 18px;
+    }
+
+    .greeting {
+      margin: 0 0 8px;
+    }
+
+    .valid-until {
+      margin: 0 0 16px;
+      font-weight: 600;
+    }
+
+    .issuer {
+      margin: 0 0 20px 0;
+      text-align: right;
+      line-height: 1.45;
+    }
+
+    .issuer .name {
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    table.items {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 12px;
+    }
+
+    table.items th,
+    table.items td {
+      border: 1px solid #333;
+      padding: 8px 6px;
+      vertical-align: top;
+    }
+
+    table.items th {
+      background: #f3f3f3;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    table.items .name {
+      width: 28%;
+    }
+
+    table.items .detail {
+      width: 34%;
+      font-size: 10px;
+    }
+
+    table.items .tax,
+    table.items .qty,
+    table.items .unit,
+    table.items .amount {
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .note-mark {
+      font-size: 10px;
+    }
+
+    .summary {
+      width: 52%;
+      margin-left: auto;
+      margin-bottom: 18px;
+      border-collapse: collapse;
+    }
+
+    .summary th,
+    .summary td {
+      padding: 5px 8px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .summary th {
+      text-align: left;
+      font-weight: 500;
+    }
+
+    .summary td {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .summary .total th,
+    .summary .total td {
+      border-bottom: 2px solid #111;
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    .reduced {
+      margin: -8px 0 16px;
+      font-size: 10px;
+      text-align: right;
+    }
+
+    .section-title {
+      margin: 0 0 6px;
+      font-size: 12px;
+      font-weight: 700;
+      border-bottom: 1px solid #111;
+      padding-bottom: 2px;
+    }
+
+    .options,
+    .remarks {
+      margin-bottom: 16px;
+    }
+
+    .options ul,
+    .remarks ul {
+      margin: 0;
+      padding-left: 1.2em;
+    }
+
+    .options li,
+    .remarks li {
+      margin-bottom: 4px;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-left: 6px;
+      padding: 0 6px;
+      border: 1px solid #333;
+      border-radius: 2px;
+      font-size: 10px;
+    }
+
+    .footer-note {
+      margin-top: 20px;
+      padding-top: 8px;
+      border-top: 1px dashed #999;
+      font-size: 10px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <div class="sheet">
+    <h1>御見積書</h1>
+
+    <div class="meta">
+      <div>2026年07月11日</div>
+      <div>No: 20260711-SAMPLE-0001</div>
+    </div>
+
+    <p class="greeting">
+      拝啓　時下ますますご清栄のこととお慶び申し上げます。<br />
+      平素は格別のご高配を賜り、厚く御礼申し上げます。
+    </p>
+    <p class="valid-until">お見積もり期限は「2026年8月10日」となります。</p>
+    <p class="greeting">下記の通り、御見積もり申し上げます。<br />敬具</p>
+
+    <div class="issuer">
+      <div class="name">株式会社サンプルギフト</div>
+      <div>ギフト事業部</div>
+      <div>登録番号：T1234567890123</div>
+      <div>〒103-0028</div>
+      <div>東京都中央区八重洲一丁目1番1号</div>
+    </div>
+
+    <table class="items">
+      <thead>
+        <tr>
+          <th class="name">品名</th>
+          <th class="detail">詳細</th>
+          <th>税</th>
+          <th>数量</th>
+          <th>単価</th>
+          <th>金額</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            わらび餅てらみす 6個セット<br />
+            <span class="note-mark">（商品コード: gift-sample-001）</span>
+          </td>
+          <td class="detail">
+            父の日・お中元・お祝い向け和スイーツ。<br />
+            冷凍発送。国産マスカルポーネ使用。
+          </td>
+          <td class="tax"><span class="note-mark">※</span>8%</td>
+          <td class="qty">5</td>
+          <td class="unit">4,380</td>
+          <td class="amount">21,900</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="summary">
+      <tr>
+        <th>8%対象(税込)</th>
+        <td>21,900</td>
+      </tr>
+      <tr>
+        <th>内消費税</th>
+        <td>1,622</td>
+      </tr>
+      <tr>
+        <th>10%対象(税込)</th>
+        <td>550</td>
+      </tr>
+      <tr>
+        <th>内消費税</th>
+        <td>50</td>
+      </tr>
+      <tr class="total">
+        <th>合計(税込)</th>
+        <td>22,450</td>
+      </tr>
+    </table>
+    <p class="reduced">※は軽減税率の対象です</p>
+
+    <section class="options">
+      <h2 class="section-title">選択済み有料オプション</h2>
+      <ul>
+        <li>
+          手提げ紙袋あり
+          <span class="badge">10%</span>
+          （+110円 / 個 × 5 = 550円）
+        </li>
+      </ul>
+      <p style="margin: 8px 0 0; font-size: 10px; color: #444;">
+        ※ 明細表は商品本体のみ。オプション金額は上記のとおり合計に含めています（方針B）。
+      </p>
+    </section>
+
+    <section class="remarks">
+      <h2 class="section-title">備考</h2>
+      <ul>
+        <li>
+          送料／北海道 2,600円、東京都 1,100円、大阪府 1,000円、福岡県 1,000円、沖縄県 1,600円
+          （お届け先に一括納品する場合の一例。点数・店舗により追加料金が発生する場合があります。）
+        </li>
+        <li>在庫について／有効期限内でも欠品等によりご用意できない場合があります。</li>
+        <li>価格について／本見積書発行時点の価格です。有効期限内でも予告なく変更する場合があります。</li>
+        <li>見積書について／本見積書は自動発行です。複数商品の一括見積は別途お問い合わせください。</li>
+      </ul>
+    </section>
+
+    <p class="footer-note">
+      サンプルPDF（方針B）／本体 8% 21,900円 + オプション 10% 550円 = 合計 22,450円<br />
+      内消費税: floor(21900×8÷108)=1,622 / floor(550×10÷110)=50
+    </p>
+  </div>
+</body>
+</html>
